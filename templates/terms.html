@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Terms and Conditions — Spendly{% endblock %}
+
+{% block content %}
+<div class="legal-page">
+    <div class="legal-container">
+        <h1>Terms and Conditions</h1>
+        <p class="legal-effective">Effective date: October 3, 2026</p>
+
+        <section>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using Spendly ("the App"), you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the App.</p>
+        </section>
+
+        <section>
+            <h2>2. Description of Service</h2>
+            <p>Spendly is a personal expense tracking application that allows users to log, categorise, and review their financial transactions. The App is intended for personal, non-commercial use only.</p>
+        </section>
+
+        <section>
+            <h2>3. User Accounts</h2>
+            <p>To access certain features you must create an account. You are responsible for:</p>
+            <ul>
+                <li>Maintaining the confidentiality of your login credentials.</li>
+                <li>All activity that occurs under your account.</li>
+                <li>Notifying us immediately of any unauthorised use of your account.</li>
+            </ul>
+            <p>We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+        </section>
+
+        <section>
+            <h2>4. User Data and Financial Information</h2>
+            <p>The financial data you enter into Spendly is your own. You retain full ownership of your data. We do not sell, share, or use your financial information for advertising or profiling purposes. See our <a href="{{ url_for('privacy') }}">Privacy Policy</a> for full details.</p>
+        </section>
+
+        <section>
+            <h2>5. Acceptable Use</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the App for any unlawful purpose or in violation of any applicable regulations.</li>
+                <li>Attempt to gain unauthorised access to other users' accounts or any part of the App's infrastructure.</li>
+                <li>Upload malicious code, malware, or any content intended to disrupt the service.</li>
+                <li>Reverse-engineer, decompile, or otherwise attempt to extract the App's source code.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Disclaimer of Warranties</h2>
+            <p>Spendly is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not warrant that the App will be error-free, uninterrupted, or that any data you enter will be retained indefinitely.</p>
+            <p>The App is a personal budgeting tool and does not constitute financial advice. Always consult a qualified financial professional for advice specific to your situation.</p>
+        </section>
+
+        <section>
+            <h2>7. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, Spendly and its developers shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of, or inability to use, the App — including but not limited to loss of data or financial decisions made in reliance on information displayed in the App.</p>
+        </section>
+
+        <section>
+            <h2>8. Intellectual Property</h2>
+            <p>All content, design, logos, and code comprising the App (excluding user-submitted data) are the intellectual property of Spendly's developers. You may not reproduce or redistribute any part of the App without prior written permission.</p>
+        </section>
+
+        <section>
+            <h2>9. Modifications to Terms</h2>
+            <p>We may update these Terms from time to time. When we do, we will revise the effective date at the top of this page. Continued use of the App after any changes constitutes your acceptance of the new Terms.</p>
+        </section>
+
+        <section>
+            <h2>10. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in India.</p>
+        </section>
+
+        <section>
+            <h2>11. Contact</h2>
+            <p>If you have any questions about these Terms, please reach out through the contact information available on the App.</p>
+        </section>
+    </div>
+</div>
+{% endblock %}
