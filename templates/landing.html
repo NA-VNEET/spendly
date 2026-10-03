@@ -28,7 +28,7 @@
 
         <div class="hero2-actions">
             <a href="{{ url_for('register') }}" class="hero2-btn">Create free account</a>
-            <a href="{{ url_for('login') }}" class="hero2-btn">See how it works</a>
+            <a href="#" class="hero2-btn" id="open-video-modal">See how it works</a>
         </div>
 
         <div class="hero2-browser">
@@ -78,8 +78,56 @@
             </div>
         </div>
 
+        <div id="video-modal" class="video-modal-overlay">
+            <div class="video-modal-content">
+                <button class="video-modal-close" id="close-video-modal" aria-label="Close video">&times;</button>
+                <div class="video-modal-iframe-wrapper">
+                    <iframe id="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/-Lt-ntUDj-g?list=PLKnIA16_RmvaYH3poI0oJvbDF4zEvpq8W&index=4" title="Spendly intro video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('video-modal');
+        const openBtn = document.getElementById('open-video-modal');
+        const closeBtn = document.getElementById('close-video-modal');
+        const iframe = document.getElementById('youtube-video');
+
+        function openModal(e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            // Stop video playing by resetting the iframe source
+            if (iframe) {
+                const iframeSrc = iframe.src;
+                iframe.src = iframeSrc;
+            }
+        }
+
+        if (openBtn) {
+            openBtn.addEventListener('click', openModal);
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        if (modal) {
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        }
+    });
+</script>
 
 <section class="features">
     <div class="features-inner">
